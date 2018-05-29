@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sample.controller.DepartamentoController"
+      prefHeight="400.0" prefWidth="400.0" spacing="15">
+    <padding>
+        <Insets bottom="15" top="25" right="15" left="15"/>
+    </padding>
+    <HBox prefHeight="40" alignment="TOP_CENTER">
+        <Label text="Departamento"/>
+    </HBox>
+    <HBox spacing="15">
+        <Label text="Clave: "/>
+        <TextField fx:id="cveTextField" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="15">
+        <Label text="Nombre: "/>
+        <TextField fx:id="nombreTextField" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="15" alignment="BOTTOM_LEFT">
+        <Button text="Aceptar" onAction="#aceptar" />
+        <Button text="Cancelar" onAction="#cancelar" />
+    </HBox>
+</VBox>

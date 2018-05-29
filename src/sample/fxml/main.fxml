@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.MainController"
+            >
+    <top>
+        <AnchorPane>
+            <VBox AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                <MenuBar>
+                    <menus>
+                        <Menu text="Tables">
+                            <items>
+                                <MenuItem text="Departamento" fx:id="departamentoMI" />
+                                <MenuItem text="Debit" />
+                                <MenuItem text="Credit" />
+                                <MenuItem text="Debit" />
+                                <MenuItem text="Credit" />
+                                <MenuItem text="Debit" />
+                                <MenuItem text="Credit" />
+                                <MenuItem text="Debit" />
+                                <MenuItem text="Credit" />
+                                <MenuItem text="Debit" />
+                                <MenuItem text="Credit" />
+                                <MenuItem text="Debit" />
+                                <MenuItem text="Credit" />
+                                <MenuItem text="Debit" />
+
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <ToolBar>
+                    <HBox>
+                        <Button text="create" onAction="#create" contentDisplay="TOP">
+                            <tooltip><Tooltip text="add element" /></tooltip>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="PLUS_SQUARE_ALT" glyphSize="30" fill="darkcyan">
+
+                                </FontAwesomeIconView>
+                            </graphic>
+                        </Button>
+                        <Separator orientation="VERTICAL"/>
+                        <Button text="update" contentDisplay="TOP" onAction="#update">
+                            <tooltip><Tooltip text="update element" /></tooltip>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" glyphSize="30" fill="darkcyan">
+
+                                </FontAwesomeIconView>
+                            </graphic>
+                        </Button>
+                        <Separator orientation="VERTICAL"/>
+                        <Button text="Delete" contentDisplay="TOP" onAction="#delete">
+                            <tooltip><Tooltip text="delete element"/></tooltip>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="TRASH_ALT" glyphSize="30" fill="indianred">
+
+                                </FontAwesomeIconView>
+                            </graphic>
+                        </Button>
+                        <Separator orientation="VERTICAL"/>
+                    </HBox>
+                </ToolBar>
+            </VBox>
+
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane >
+            <TableView fx:id="table" VBox.vgrow="ALWAYS"  AnchorPane.rightAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10">
+                <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+            </TableView>
+
+        </AnchorPane>
+    </center>
+
+</BorderPane>
