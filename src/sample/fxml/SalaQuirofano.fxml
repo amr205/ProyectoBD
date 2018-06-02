@@ -9,13 +9,13 @@
 <?import javafx.geometry.Insets?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="sample.controller.DepartamentoController"
+      fx:controller="sample.controller.SalaQuirofanoController"
       prefHeight="400.0" prefWidth="400.0" spacing="15">
     <padding>
         <Insets bottom="15" top="25" right="15" left="15"/>
     </padding>
     <HBox prefHeight="40" alignment="TOP_CENTER">
-        <Label text="Departamento"/>
+        <Label text="Sala de quirofano"/>
     </HBox>
 
     <HBox spacing="15">
@@ -23,8 +23,8 @@
         <TextField fx:id="cveTextField" HBox.hgrow="ALWAYS"/>
     </HBox>
     <HBox spacing="15">
-        <Label text="Nombre: "/>
-        <TextField fx:id="nombreTextField" HBox.hgrow="ALWAYS"/>
+        <Label text="Descripcion: "/>
+        <TextField fx:id="descTextField" HBox.hgrow="ALWAYS"/>
     </HBox>
 
     <HBox spacing="15" alignment="BOTTOM_LEFT">

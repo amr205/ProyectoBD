@@ -48,7 +48,7 @@ create table TipoEstudio(CveTipoEstudio varchar(4) not null,
 /*--************************************** [SalaQuirofano]*/
 
 create table SalaQuirofano( CveSala varchar(4) not null,
-			Descipcion varchar(200),
+			Descripcion varchar(200),
 			constraint SalaQuiforanoPK primary key (CveSala));
 
 
@@ -64,7 +64,7 @@ create table TipoHabitacion (CveTipoHabitacion varchar(4) not null,
 
 
 create table Enfermera(	CveEnfermera varchar(4) not null,
-			Nombre varchar(4),
+			Nombre varchar(50),
 			Edad tinyint,
 			constraint EnfermeraPK primary key (CveEnfermera));
 

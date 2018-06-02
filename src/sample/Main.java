@@ -17,7 +17,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
         primaryStage.setTitle("Proyecto base de datos");
         Scene scene = new Scene(root, 640, 400);
-        //scene.getStylesheets().add(getClass().getResource("css/style.css").toString());
+        //o scene.getStylesheets().add(getClass().getResource("css/style.css").toString());
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
         primaryStage.show();
