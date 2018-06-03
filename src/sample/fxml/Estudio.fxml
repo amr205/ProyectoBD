@@ -9,13 +9,13 @@
 <?import javafx.geometry.Insets?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="sample.controller.TipoEnfermedadController"
+      fx:controller="sample.controller.EstudioController"
       prefHeight="400.0" prefWidth="400.0" spacing="15">
     <padding>
         <Insets bottom="15" top="25" right="15" left="15"/>
     </padding>
     <HBox prefHeight="40" alignment="TOP_CENTER">
-        <Label text="Tipo de enfermedad"/>
+        <Label text="Estudio"/>
     </HBox>
 
     <HBox spacing="15">
@@ -23,8 +23,20 @@
         <TextField fx:id="cveTextField" HBox.hgrow="ALWAYS"/>
     </HBox>
     <HBox spacing="15">
-        <Label text="Descripcion: "/>
-        <TextField fx:id="descTextField" HBox.hgrow="ALWAYS"/>
+        <Label text="Licencia del doctor: "/>
+        <TextField fx:id="licenciaTextField" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="15">
+        <Label text="Tipo de estudio: "/>
+        <TextField fx:id="cveTipoTextField" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="15">
+        <Label text="Razón: "/>
+        <TextField fx:id="razonTextField" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="15">
+        <Label text="Fecha: "/>
+        <DatePicker fx:id="fechaDP" HBox.hgrow="ALWAYS"/>
     </HBox>
 
     <HBox spacing="15" alignment="BOTTOM_LEFT">

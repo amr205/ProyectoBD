@@ -4,22 +4,22 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.Database.Models.TipoEnfermedad;
+import sample.Database.EnfermedadDAO;
+import sample.Database.Models.Enfermedad;
 import sample.Database.MySQL;
-import sample.Database.TipoEnfermedadDAO;
 
-public class TipoEnfermedadController {
+public class EnfermedadController {
     @FXML
     TextField cveTextField, descTextField;
 
     int tipo =0;//0 representa crear, 1 update
-    TipoEnfermedadDAO dao = new TipoEnfermedadDAO(MySQL.getConnection());
+    EnfermedadDAO dao = new EnfermedadDAO(MySQL.getConnection());
 
     public void aceptar(ActionEvent actionEvent) {
         String cve, nombre;
         cve = cveTextField.getText();
         nombre = descTextField.getText();
-        TipoEnfermedad model = new TipoEnfermedad(cve,nombre);
+        Enfermedad model = new Enfermedad(cve,nombre);
 
         if(tipo==0){
             dao.insert(model);
@@ -37,12 +37,12 @@ public class TipoEnfermedadController {
         stage.close();
     }
 
-    public void setTipo(int tipo, TipoEnfermedad tipoEnfermedad) {
+    public void setTipo(int tipo, Enfermedad tipoEnfermedad) {
         this.tipo = tipo;
 
         //si el tipo es 1 hay que poner la inforción que se proporcione y bloquear los textFields que sean claves primarias
         if(tipoEnfermedad!=null){
-            cveTextField.setText(tipoEnfermedad.getCveTipoEnfermedad());
+            cveTextField.setText(tipoEnfermedad.getCveEnfermedad());
             descTextField.setText(tipoEnfermedad.getDescripcion());
 
             cveTextField.setEditable(false);

@@ -16,7 +16,8 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
     @FXML
     MenuItem departamentoMI, tipoMedicamentoMI, especialidadDoctorMI,tipoEnfermedadMI,tipoPacienteMI,tipoHabitacionMI,tipoEstudioMI,salaQuirofanoMI,
-            enfermeraMI;
+            enfermeraMI, doctorMI, medicamentoMI, consultorioMI, laboratoriosMI, pacienteMI, estudioMI,habitacionMI,asignadosMI, operacionMI,
+            consultaMI, recetaMI,diagnosticoMI;
 
     @FXML
     TableView table;
@@ -25,12 +26,24 @@ public class MainController implements Initializable {
     private DepartamentoTable departamentoTable = new DepartamentoTable();
     private TipoMedicamentoTable tipoMedicamentoTable = new TipoMedicamentoTable();
     private EspecialidadDoctorTable especialidadDoctorTable = new EspecialidadDoctorTable();
-    private TipoEnfermedadTable tipoEnfermedadTable = new TipoEnfermedadTable();
+    private EnfermedadTable tipoEnfermedadTable = new EnfermedadTable();
     private TipoPacienteTable tipoPacienteTable = new TipoPacienteTable();
     private TipoHabitacionTable tipoHabitacionTable = new TipoHabitacionTable();
     private TipoEstudioTable tipoEstudioTable = new TipoEstudioTable();
     private SalaQuirofanoTable salaQuirofanoTable = new SalaQuirofanoTable();
     private EnfermeraTable enfermeraTable = new EnfermeraTable();
+    private DoctorTable doctorTable = new DoctorTable();
+    private MedicamentoTable medicamentoTable = new MedicamentoTable();
+    private ConsultorioTable consultorioTable = new ConsultorioTable();
+    private LaboratoriosTable laboratoriosTable = new LaboratoriosTable();
+    private PacienteTable pacienteTable = new PacienteTable();
+    private EstudioTable estudioTable = new EstudioTable();
+    private HabitacionTable habitacionTable = new HabitacionTable();
+    private AsignadoTable asignadoTable = new AsignadoTable();
+    private OperacionTable operacionTable = new OperacionTable();
+    private ConsultaTable consultaTable = new ConsultaTable();
+    private RecetaTable recetaTable = new RecetaTable();
+    private DiagnosticoTable diagnosticoTable = new DiagnosticoTable();
 
     //dummyTable
     private ParentTable parentTable = new ParentTable();
@@ -41,22 +54,47 @@ public class MainController implements Initializable {
         public void handle(Event event) {
             if(event.getSource()==departamentoMI)
                 parentTable= departamentoTable;
-            if(event.getSource()==tipoMedicamentoMI)
+            else if(event.getSource()==tipoMedicamentoMI)
                 parentTable= tipoMedicamentoTable;
-            if(event.getSource()==especialidadDoctorMI)
+            else if(event.getSource()==especialidadDoctorMI)
                 parentTable= especialidadDoctorTable;
-            if(event.getSource()==tipoEnfermedadMI)
+            else if(event.getSource()==tipoEnfermedadMI)
                 parentTable= tipoEnfermedadTable;
-            if(event.getSource()==tipoPacienteMI)
+            else if(event.getSource()==tipoPacienteMI)
                 parentTable= tipoPacienteTable;
-            if(event.getSource()==tipoHabitacionMI)
+            else if(event.getSource()==tipoHabitacionMI)
                 parentTable= tipoHabitacionTable;
-            if(event.getSource()==tipoEstudioMI)
+            else if(event.getSource()==tipoEstudioMI)
                 parentTable= tipoEstudioTable;
-            if(event.getSource()==salaQuirofanoMI)
+            else if(event.getSource()==salaQuirofanoMI)
                 parentTable= salaQuirofanoTable;
-            if(event.getSource()==enfermeraMI)
+            else if(event.getSource()==enfermeraMI)
                 parentTable= enfermeraTable;
+            else if(event.getSource()==doctorMI)
+                parentTable= doctorTable;
+            else if(event.getSource()==medicamentoMI)
+                parentTable= medicamentoTable;
+            else if(event.getSource()==consultorioMI)
+                parentTable= consultorioTable;
+            else if(event.getSource()==laboratoriosMI)
+                parentTable= laboratoriosTable;
+            else if(event.getSource()==pacienteMI)
+                parentTable= pacienteTable;
+            else if(event.getSource()==estudioMI)
+                parentTable= estudioTable;
+            else if(event.getSource()==habitacionMI)
+                parentTable= habitacionTable;
+            else if(event.getSource()==asignadosMI)
+                parentTable= asignadoTable;
+            else if(event.getSource()==operacionMI)
+                parentTable= operacionTable;
+            else if(event.getSource()==consultaMI)
+                parentTable= consultaTable;
+            else if(event.getSource()==recetaMI)
+                parentTable= recetaTable;
+            else if(event.getSource()==diagnosticoMI)
+                parentTable= diagnosticoTable;
+
 
             updateData();
         }
@@ -80,12 +118,18 @@ public class MainController implements Initializable {
         tipoEstudioMI.setOnAction(eventHandler);
         salaQuirofanoMI.setOnAction(eventHandler);
         enfermeraMI.setOnAction(eventHandler);
-
-
-
-
-
-
+        doctorMI.setOnAction(eventHandler);
+        medicamentoMI.setOnAction(eventHandler);
+        consultorioMI.setOnAction(eventHandler);
+        laboratoriosMI.setOnAction(eventHandler);
+        pacienteMI.setOnAction(eventHandler);
+        estudioMI.setOnAction(eventHandler);
+        habitacionMI.setOnAction(eventHandler);
+        asignadosMI.setOnAction(eventHandler);
+        operacionMI.setOnAction(eventHandler);
+        consultaMI.setOnAction(eventHandler);
+        recetaMI.setOnAction(eventHandler);
+        diagnosticoMI.setOnAction(eventHandler);
 
     }
 

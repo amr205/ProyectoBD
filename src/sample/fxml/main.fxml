@@ -43,13 +43,19 @@
                             <MenuItem text="Quirofanos" fx:id="salaQuirofanoMI" />
                             <MenuItem text="Tipo de habitaciones" fx:id="tipoHabitacionMI" />
                             <MenuItem text="Enfermeras" fx:id="enfermeraMI" />
-                            <MenuItem text="Debit" />
-                            <MenuItem text="Credit" />
-                            <MenuItem text="Debit" />
-                            <MenuItem text="Credit" />
-                            <MenuItem text="Debit" />
-                            <MenuItem text="Credit" />
-                            <MenuItem text="Debit" />
+                            <MenuItem text="Doctores" fx:id="doctorMI" />
+                            <MenuItem text="Medicamentos" fx:id="medicamentoMI" />
+                            <MenuItem text="Consultorios" fx:id="consultorioMI" />
+                            <MenuItem text="Laboratorios" fx:id="laboratoriosMI" />
+                            <MenuItem text="Pacientes" fx:id="pacienteMI" />
+                            <MenuItem text="Estudios" fx:id="estudioMI" />
+                            <MenuItem text="Habitaciones" fx:id="habitacionMI"/>
+                            <MenuItem text="Pacientes asignados a enfermeras" fx:id="asignadosMI" />
+                            <MenuItem text="Operaciones" fx:id="operacionMI" />
+                            <MenuItem text="Consultas" fx:id="consultaMI" />
+                            <MenuItem text="Recetas"  fx:id="recetaMI"/>
+                            <MenuItem text="Diagnosticos" fx:id="diagnosticoMI"/>
+
 
                         </items>
                     </Menu>
