@@ -5,9 +5,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import sample.Tables.*;
 
 import java.net.URL;
@@ -21,6 +19,9 @@ public class MainController implements Initializable {
 
     @FXML
     TableView table;
+
+    @FXML
+    Label tableLabel;
 
     //lista de las tablas
     private DepartamentoTable departamentoTable = new DepartamentoTable();
@@ -96,7 +97,7 @@ public class MainController implements Initializable {
                 parentTable= diagnosticoTable;
 
 
-            updateData();
+            updateData((MenuItem)event.getSource());
         }
     };
 
@@ -106,7 +107,7 @@ public class MainController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         //initialize data
         parentTable= departamentoTable;
-        updateData();
+        updateData(departamentoMI);
 
         //addHandler to all menu Items
         departamentoMI.setOnAction(eventHandler);
@@ -133,7 +134,8 @@ public class MainController implements Initializable {
 
     }
 
-    private void updateData() {
+    private void updateData(MenuItem menuItem) {
+        tableLabel.setText(menuItem.getText());
         parentTable.initTable(table);
     }
 

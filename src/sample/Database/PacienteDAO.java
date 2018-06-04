@@ -80,7 +80,7 @@ public class PacienteDAO {
         try {
             String query = "update Paciente "
                     + " set CveTipoPaciente = ?, Nombre = ?, Sexo = ?, Edad = ?, CURP = ?"
-                    + " where Licencia = ?";
+                    + " where CvePaciente = ?";
             PreparedStatement st =  conn.prepareStatement(query);
 
             st.setString(  1, dep.getCveTipoPaciente());
